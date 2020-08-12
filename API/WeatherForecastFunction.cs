@@ -8,8 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Linq;
+using BlazorApp.Shared;
 
-namespace Api
+namespace BlazorApp.Api
 {
     public static class WeatherForecastFunction
     {
@@ -31,14 +32,6 @@ namespace Api
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray());
-        }
-
-        public class WeatherForecast
-        {
-            public DateTime Date { get; set; }
-            public int TemperatureC { get; set; }
-            public string Summary { get; set; }
-            public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
         }
     }
 }
